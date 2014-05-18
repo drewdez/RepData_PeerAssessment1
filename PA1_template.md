@@ -170,7 +170,6 @@ ggplot2.
 # create daily summary data frame
 daily_summary_imp <- aggregate(steps ~ date, data = activities_imp, sum, na.rm = F, 
     na.action = na.pass)
-names(daily_summary_imp) <- c("date", "steps")
 
 # create histogram of daily steps
 g <- ggplot(daily_summary_imp, aes(steps))

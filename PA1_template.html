@@ -318,7 +318,6 @@ ggplot2.</p>
 <pre><code class="r"># create daily summary data frame
 daily_summary_imp &lt;- aggregate(steps ~ date, data = activities_imp, sum, na.rm = F, 
     na.action = na.pass)
-names(daily_summary_imp) &lt;- c(&quot;date&quot;, &quot;steps&quot;)
 
 # create histogram of daily steps
 g &lt;- ggplot(daily_summary_imp, aes(steps))
