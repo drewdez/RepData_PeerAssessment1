@@ -3,7 +3,6 @@
 This report is my submission for Assignment One of the Coursera Reproducible
 Research course.
 
-<br>
 ## Preparation
 Before working with the data, I load the ggplot2 library, and define a
 simple function to enable nice formatting for R values printed inline.
@@ -30,7 +29,6 @@ val_fmt <- function(val) {
 ```
 
 
-<br>
 ## Loading and preprocessing the data
 
 First, I read the data into an R data frame, ```activities```.
@@ -64,7 +62,6 @@ names(interval_summary) <- c("interval", "average_steps")
 ```
 
 
-<br>
 ## What is the mean total number of steps taken per day?
 
 I create a histogram of daily steps from the ```daily_summary``` data frame
@@ -96,7 +93,6 @@ median_steps <- median(daily_summary$steps, na.rm = T)
 The mean value of daily steps is **10,766.2**, and the median
 value of daily steps is **10,765**.
 
-<br>
 ## What is the average daily activity pattern?
 
 In order to examine the average daily activity pattern, I create a time-series
@@ -128,7 +124,6 @@ max_interval <- interval_summary[interval_summary$average_steps == max_interval_
 The maximum value of average steps (**206.2**) occurs
 in the  interval beginning at **835**.
 
-<br>
 ## Imputing missing values
 
 I first calculate and report the number of missing step values.
@@ -213,7 +208,6 @@ results in decreases in the mean and median daily steps, and suggests that
 imputing missing values from median *daily* step counts might be more reasonable
 in cases where full days of data are missing.
 
-<br>
 ## Are there differences in activity patterns between weekdays and weekends?
 
 In order to examine differences in activity patterns between weekdays and

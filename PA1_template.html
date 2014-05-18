@@ -184,8 +184,6 @@ hljs.initHighlightingOnLoad();
 <p>This report is my submission for Assignment One of the Coursera Reproducible
 Research course.</p>
 
-<p><br></p>
-
 <h2>Preparation</h2>
 
 <p>Before working with the data, I load the ggplot2 library, and define a
@@ -207,8 +205,6 @@ val_fmt &lt;- function(val) {
     }
 }
 </code></pre>
-
-<p><br></p>
 
 <h2>Loading and preprocessing the data</h2>
 
@@ -233,8 +229,6 @@ interval_summary &lt;- aggregate(steps ~ interval, data = activities, mean, na.r
     na.action = na.pass)
 names(interval_summary) &lt;- c(&quot;interval&quot;, &quot;average_steps&quot;)
 </code></pre>
-
-<p><br></p>
 
 <h2>What is the mean total number of steps taken per day?</h2>
 
@@ -261,8 +255,6 @@ median_steps &lt;- median(daily_summary$steps, na.rm = T)
 <p>The mean value of daily steps is <strong>10,766.2</strong>, and the median
 value of daily steps is <strong>10,765</strong>.</p>
 
-<p><br></p>
-
 <h2>What is the average daily activity pattern?</h2>
 
 <p>In order to examine the average daily activity pattern, I create a time-series
@@ -287,8 +279,6 @@ max_interval &lt;- interval_summary[interval_summary$average_steps == max_interv
 
 <p>The maximum value of average steps (<strong>206.2</strong>) occurs
 in the  interval beginning at <strong>835</strong>.</p>
-
-<p><br></p>
 
 <h2>Imputing missing values</h2>
 
@@ -361,8 +351,6 @@ histogram above. Cleary, adding eight days at this relatively low step count
 results in decreases in the mean and median daily steps, and suggests that
 imputing missing values from median <em>daily</em> step counts might be more reasonable
 in cases where full days of data are missing.</p>
-
-<p><br></p>
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
