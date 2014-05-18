@@ -236,7 +236,7 @@ names(interval_summary_imp) <- c("interval", "daytype", "average_steps")
 
 # create panel plot
 g <- ggplot(interval_summary_imp, aes(x = interval, y = average_steps))
-g + geom_line(color = "steelblue", size = 1.5) + facet_grid(daytype ~ .) + labs(title = "Average Steps by Five-Minute Interval and Daytype", 
+g + geom_line(color = "steelblue", size = 1.5) + facet_grid(daytype ~ .) + labs(title = "Average Steps by Five-Minute Interval and Day Type", 
     x = "Interval Start Time (hhmm)", y = "Average Steps")
 ```
 
